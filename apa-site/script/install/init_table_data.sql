@@ -44,6 +44,7 @@ CREATE TABLE `v_ld_raw_domain` (
   PRIMARY KEY (`id`)
 ) ENGINE=MERGE UNION(ld_raw_domain,ld_raw_domain_201712) INSERT_METHOD=LAST COMMENT='原始域名表';
 ALTER table v_ld_raw_domain ENGINE=MERGE UNION(ld_raw_domain,ld_raw_domain_201712,ld_raw_domain_201801,ld_raw_domain_201802,ld_raw_domain_201803,ld_raw_domain_201804,ld_raw_domain_201805) INSERT_METHOD=LAST COMMENT='虚拟原始域名表';
+
 -- ----------------------------
 --  Table structure for `ld_sensitive_domain`
 -- ----------------------------
