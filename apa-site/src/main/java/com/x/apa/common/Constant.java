@@ -1,0 +1,65 @@
+package com.x.apa.common;
+
+/**
+ * @author liumeng
+ */
+public interface Constant {
+
+	int DELETED_NO = 0; // 正常状态（未删除）
+	int DELETED_YES = 1; // 删除
+
+	int STATUS_OPEN = 0; // 启用
+	int STATUS_CLOSE = 1; // 停用
+
+	String DEFAULT_PAGE_SIZE = "30";
+
+	String SUSPECT_DOMAIN_MATCH_REGULAR = "regular";
+	String SUSPECT_DOMAIN_MATCH_WHOIS = "whois";
+	String SUSPECT_DOMAIN_MATCH_PHISHTANK = "phishtank";
+	String SUSPECT_DOMAIN_MATCH_NONE = "none";
+
+	String CLUE_URL_TEMPLATE_ID = "0";
+
+	int CLUE_URL_PROGRESS_INIT = 0; // 初始
+	int CLUE_URL_PROGRESS_ERR = 1; // 访问失败
+	int CLUE_URL_PROGRESS_OK_HTML = 2; // 访问成功且为HTML
+	int CLUE_URL_PROGRESS_OK_OTHER = 3; // 访问成功非HTML
+	int CLUE_URL_PROGRESS_GIVEUP = 4; // 命中白名单或超过重定向次数，放弃访问
+	int CLUE_URL_PROGRESS_UNKNOWN = 5; // 未知错误
+
+	String SUSPECT_URL_MATCH_NO = "0"; // 非嫌疑URL
+	String SUSPECT_URL_MATCH_YES = "1"; // 是嫌疑URL
+
+	int SUSPECT_URL_VERIFY_NONE = 0; // 未核实
+	int SUSPECT_URL_VERIFY_PHISHING = 1; // 是钓鱼网站
+	int SUSPECT_URL_VERIFY_NO_PHISHING = 2; // 非钓鱼网站
+
+	int INSPECT_URL_BRAND_CATEGORY_CLIENT = 0; // 客户品牌
+	int INSPECT_URL_BRAND_CATEGORY_NO_CLIENT = 1; // 非客户品牌
+	int INSPECT_URL_BRAND_CATEGORY_POC_CLIENT = 2; // 潜在客户
+
+	int INSPECT_URL_INSPECT_LEVEL_SUSPEND = 0; // 暂停巡检
+	int INSPECT_URL_INSPECT_LEVEL_ROUTINE = 1; // 例行巡检
+
+	int INSPECT_URL_INSPECT_STATUS_INIT = 0; // 初始状态
+	int INSPECT_URL_INSPECT_STATUS_ACTIVE = 1; // 在线
+	int INSPECT_URL_INSPECT_STATUS_CHANGED = 2; // 内容改变
+	int INSPECT_URL_INSPECT_STATUS_INACTIVE = 3; // 离线
+
+	int INSPECT_EVENT_CATEGORY_STATUSCHANGE = 0; // 状态改变
+	int INSPECT_EVENT_CATEGORY_CONTENTCHANGE = 1; // 内容改变
+
+	int INSPECT_EVENT_PROGRESS_INIT = 0; // 未处理
+	int INSPECT_EVENT_PROGRESS_DONE = 1; // 已处理
+	int INSPECT_EVENT_PROGRESS_NONEED = 2; // 无需处理
+
+	int DOMAIN_COMMON = 0; // 普通域名，未被标记为敏感
+	int DOMAIN_SENSITIVE = 1; // 敏感域名
+
+	int SENSITIVE_DOMAIN_CATEGORY_LEARNING = 0; // 机器学习
+	int SENSITIVE_DOMAIN_CATEGORY_PEOPLE = 1; // 人工添加
+	int SENSITIVE_DOMAIN_CATEGORY_RAWDOMAIN = 2; // 原始域名添加
+	int SENSITIVE_DOMAIN_CATEGORY_IP_REVERSE = 3; // IP反查
+	int SENSITIVE_DOMAIN_CATEGORY_EMAIL_REVERSE = 4; // EMAIL反查
+
+}
